@@ -15,7 +15,7 @@ import React, { Component } from 'react'
     onSubmit = e => {
         e.preventDefault();
         if(this.state.text=== '') {
-         this.props.alert('Please the some text','danger')
+         this.props.alert('Please enter the name of github User','danger')
         } else 
         {
         this.props.searchUsers(this.state.text)
@@ -29,10 +29,10 @@ import React, { Component } from 'react'
         return (
             <div>
                 <form onSubmit={this.onSubmit} className='form'> 
-                <input type="text" name='text' placeholder='Search Users..' value={this.state.text} onChange={this.onChange}/>
-                <input type="submit" value='search' className='btn btn-dark btn-block'/>
+                <input type="text" name='text' placeholder='Enter the name of github user..' value={this.state.text} onChange={this.onChange}/>
+                <input type="submit" value='Search' className='btn btn-dark btn-block'/>
                 </form>
-                {showClear && <button className='btn btn-light btn-block' onClick={clearUsers}>Clear</button> }
+                {showClear && <button className='btn btn-light btn-block ' onClick={clearUsers}>Clear</button> }
                 
             </div>
         )
